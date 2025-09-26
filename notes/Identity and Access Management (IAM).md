@@ -1,4 +1,5 @@
-## Identity and Access Management (IAM)
+# Identity and Access Management (IAM)
+## Theory : 
 It is a way of identifying who can do what on which resource. The who can be a person, group or application. The what refers to specific privileges or actions and the resource could be any Google Cloud service.
 
 <div align="center">
@@ -71,3 +72,6 @@ By default, all projects come with a built-in Compute Engine default service acc
 ![image](https://user-images.githubusercontent.com/59575502/194293393-42af1e9a-0fe6-4ce5-87ee-0f0ff2bc3f4c.png)
 
 ![image (1)](https://user-images.githubusercontent.com/59575502/194294029-30a67e67-a5be-48bf-8f37-26cdb969e576.png)
+
+## Practice : 
+### Using gcloud
