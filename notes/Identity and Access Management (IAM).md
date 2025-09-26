@@ -1,6 +1,8 @@
 # Identity and Access Management (IAM)
 ## Theory : 
-It is a way of identifying who can do what on which resource. The who can be a person, group or application. The what refers to specific privileges or actions and the resource could be any Google Cloud service.
+- Administrators can apply policies that define who can do what on which resources.
+
+- It is a way of identifying who can do what on which resource. The who can be a person, group or application. The what refers to specific privileges or actions and the resource could be any Google Cloud service.
 
 <div align="center">
   <strong>IAM OBJECTS</strong>
@@ -24,6 +26,7 @@ It is a way of identifying who can do what on which resource. The who can be a p
     - Deleter (delete projects)
 
 ### Roles
+An IAM role is a collection of permissions.
 There are three types of roles in Cloud IAM: 
 - ```Basic roles``` (apply across all services in a project) ```owner``` ```editor``` ```viewer``` ```billing admin```
 - ```Predefined roles``` (apply to a specific resource in a project) ```InstanceAdminRole``` -> ```compute.instance.(get,list,delete,start,stop,setMachineType)``` list of permission bundled together.
@@ -35,6 +38,11 @@ which define the who part of who can do what on which resource. There are five d
 <img width="1200" src="https://user-images.githubusercontent.com/59575502/194287087-c5b0c858-2693-4696-b11a-208e8d84d358.png">
 
 #### Service accounts
+What if you want to give permissions to a Compute Engine virtual machine, rather than to a person?
+- It's a ```resource``` so you can add it to IAM.
+- Service accounts are named with an email address
+- Instead of passwords they use cryptographic keys to access resources.
+
 A service account is an account that belongs to your application instead of an individual end user. When you run code that is hosted in Google Cloud, you specify an account that that code should run as.
 
 #### Google groups
@@ -44,7 +52,10 @@ A Google Group is a named collection of Google accounts and service accounts. Ev
 A Workspace domain represents a virtual group of all the Google accounts that have been created in an organization's workspace account. Workspace domains represent your organization's Internet domain name, such as Example.com. And when you add a user to your Workspace domain, a new Google account is created for the user inside of this virtual group, such as username@example.com.
 
 #### Cloud Identity
-Cloud Identity lets you manage users and groups using Google Admin console.
+- Cloud Identity lets you manage users and groups using Google Admin console.
+- Give users easy access to apps with single sign-on
+- Multi-factor authentication protects user and company data
+- Usage of Active Directory or LDAP ( If anyone joins/leaves the org )
 
 ### IAM Policy
 - A policy contains a ```list of bindings```.
